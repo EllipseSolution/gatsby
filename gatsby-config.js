@@ -28,6 +28,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-tawk.to`,
+      options: {
+        tawkId: "61ebd0539bd1f31184d8b67e",
+        tawkKey: "1fq0ibhi9",
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
