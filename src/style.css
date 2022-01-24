@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* CSS Custom Properties Definitions */
 
 :root {
@@ -254,6 +258,48 @@ a:focus {
   margin-bottom: var(--spacing-12);
 }
 
+.header-stripes {
+  background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  transform: skewY(-12deg);
+  transform-origin: 0;
+}
+.header-stripes span {
+  height: 175px;
+  width: 33.33333%;
+}
+.header-stripes span:nth-child(1) {
+  background: #53f;
+  left: -16%;
+  top: 50px;
+  position: relative;
+}
+.header-stripes span:nth-child(2) {
+  background: #4553ff;
+  left: -16%;
+  top: 50px;
+  position: relative;
+}
+.header-stripes span:nth-child(3) {
+  background: #4f40ff;
+  left: -16%;
+  top: 50px;
+  position: relative;
+}
+.header-stripes span:nth-child(4) {
+  background: #25ddf5;
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+}
+.header-stripes span:nth-child(5) {
+  background: #1fa2ff;
+  position: absolute;
+  bottom: 0;
+}
+
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
@@ -330,4 +376,40 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  align-items:flex-end;
+  bottom:0px;
+  box-sizing:border-box;
+  color:rgb(58, 58, 58);
+  display:flex;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 74.6094px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight:500;
+  height:232.781px;
+  left:0px;
+  letter-spacing:-2.98438px;
+  line-height:77.5938px;
+  margin-top:100px;
+  min-height:200px;
+  min-width:calc(100% + 100px);
+  opacity: 0.3;
+  padding-bottom: 0px;
+  padding-left:16px;
+  padding-right:0px;
+  padding-top:0px;
+  position:absolute;
+  width:494px;
+  z-index:2;
+  -webkit-font-smoothing:antialiased;
+  /* transform: translate(-50%, -50%); */
+  /* color: white; */
+}
+.center {
+  text-align: center;
 }
