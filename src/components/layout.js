@@ -1,6 +1,16 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import Navigation from "./landingPage/navigation"
+import HeroImage from "./landingPage/heroImage"
+import SectionOne from "./landingPage/sectionOne"
+import SectionTwo from "./landingPage/sectionTwo"
+import SectionThree from "./landingPage/sectionThree"
+import Pricing from "./landingPage/pricing"
+import WaveDivider from "./landingPage/waveDivider"
+import CallToAction from "./landingPage/callToAction"
+import Footer from "./landingPage/footer"
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -21,15 +31,22 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <body className="leading-normal tracking-normal text-white gradient">
+      <Navigation />
+      <HeroImage />
+      <SectionOne />
+      <SectionTwo />
+      <SectionThree />
+      <Pricing />
+      <WaveDivider />
+      <CallToAction />
+      <Footer />
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
-    </div>
+    </body>
   )
 }
 
