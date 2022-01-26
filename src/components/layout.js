@@ -41,11 +41,8 @@ const Layout = ({ location, title, children }) => {
       <WaveDivider />
       <CallToAction />
       <Footer />
-      <header className="global-header">{header}</header>
+      {/* <header className="global-header">{header}</header> */}
       <main>{children}</main>
-      <footer>
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
     </body>
   )
 }

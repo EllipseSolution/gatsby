@@ -1,24 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Layout = ({ location, title, children }) => {
-  // const rootPath = `${__PATH_PREFIX__}/`
-  // let header
-
-  // if (isRootPath) {
-  //   header = (
-  //     <h1 className="main-heading">
-  //       <Link to="/">{title}</Link>
-  //     </h1>
-  //   )
-  // } else {
-  //   header = (
-  //     <Link className="header-link-home" to="/">
-  //       {title}
-  //     </Link>
-  //   )
-  // }
-
   return (
     <>
       <div class="pt-24">
@@ -39,7 +22,14 @@ const Layout = ({ location, title, children }) => {
             </button>
           </div>
           <div class="w-full md:w-3/5 py-6 text-center">
-            <img class="w-full md:w-4/5 z-50" src="hero.png" />
+            <StaticImage
+              className="w-full md:w-4/5"
+              placeholder="none"
+              formats={["auto", "webp", "avif"]}
+              src="../../images/hero.png"
+              alt="ellipse hero image"
+            />
+            {/* <img class="w-full md:w-4/5 z-50" src="hero.png" /> */}
           </div>
         </div>
       </div>
